@@ -1,0 +1,36 @@
+
+
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+
+/* @font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'lato-black';
+    src: url('../fonts/lato/Lato-Black.ttf');
+} */
+
+h1 {
+    /* font-weight: normal; */
+    font-style: normal;
+}
+
+
+.regular {
+    /* font-family: 'lato-regular'; */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.black {
+    /* font-family: 'lato-black'; */
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+

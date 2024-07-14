@@ -1,0 +1,61 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.one {
+    /* margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px; */
+
+    /* margin: 20px 30px 40px 100px; */
+    /* margin: 20px 30px 40px; */
+    /* margin: 20px 30px; */
+    margin: 20px;
+
+}
+
+.one {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+
+.one {
+    
+    /* border-top-width: 10px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-style: solid; 
+    border-color: black; */
+   
+
+
+    border-top: 50px solid black;
+    border-right: 50px solid black;
+}
+
+
+
+.two {
+    padding: 20px;
+    border: 30px solid black;
+    box-sizing: border-box;
+
+    border-radius: 50%;
+}
+
+
+.three {
+    margin-top: 100px;
+    /* border-radius: 10px; */
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+
+
+

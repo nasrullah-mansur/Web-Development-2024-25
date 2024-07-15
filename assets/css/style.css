@@ -1,63 +1,88 @@
-.one {
-    width: 400px;
-    height: 400px;
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Common CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.one:hover {
-    background-color: green;
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: 100;
 }
 
-input {
-    width: 500px;
-    height: 56px;
+ul, 
+ol {
+    list-style: none;
 }
 
-input:focus {
-    border: 5px solid red;
-    outline: 0px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Barlow", sans-serif;
+    font-style: normal;
+    font-weight: 600;
 }
 
-p::selection {
-    background-color: red;
-    color: black;
-}
-
-
-/* .text {
-    border: 2px solid yellow;
+/* ol {
+    list-style: none;
 } */
 
-
-input[type="text"] {
-    border: 2px solid yellow;
+a {
+    text-decoration: none;
 }
-
 
 .container {
+    width: 1320px;
+    margin: 0 auto;
+    /* background-color: rgba(255, 192, 203, 0.416); */
+}
+
+/* Menu */
+.menu {
+    padding: 30px 0;
+}
+
+.menu .container {
     display: flex;
-    width: 1000px;
-    height: 400px;
-    border: 5px solid red;
-    box-sizing: border-box;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin: 0 auto;
+    align-items: center;
 }
 
-.container div {
-    height: 300px;
-    width: 30%;
-    margin: 0 auto;
-    border: 2px solid black;
-    box-sizing: border-box;
+.menu .list {
+    margin-left: auto;
 }
 
-.ov {
-    width: 200px;
-    height: 200px;
-    border: 1px solid red;
-    overflow: scroll;
+.menu .list ul {
+    display: flex;
+}
+
+.menu .list ul li a {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-left: 30px;
+    color: #000000;
+}
+
+.menu .download-btn {
+    margin-left: 45px;
+}
+
+.menu .download-btn a {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #CF0000;
+    color: #ffffff;
+    padding: 12px 17px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 

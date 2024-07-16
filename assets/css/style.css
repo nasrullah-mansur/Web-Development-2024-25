@@ -9,10 +9,10 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 400;
     font-style: normal;
-    font-variation-settings: 100;
+    /* font-variation-settings: 100; */
 }
 
 ul, 
@@ -48,6 +48,8 @@ a {
 /* Menu */
 .menu {
     padding: 30px 0;
+    position: absolute;
+    width: 100%;
 }
 
 .menu .container {
@@ -83,6 +85,61 @@ a {
     padding: 12px 17px;
     border-radius: 5px;
     display: inline-block;
+}
+
+
+/* Banner */
+.banner {
+    /* background-color: pink; */
+    background-image: url(../images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.banner .container {
+    display: flex;
+}
+
+.banner .banner-text {
+    width: 50%;
+    /* background-color: red; */
+    padding-right: 40px;
+}
+
+.banner .banner-text span {
+    color: #CF0000;
+    font-size: 18px;
+    margin-top: 65px;
+    display: inline-block;
+}
+
+.banner .banner-text h1 {
+    font-size: 64px;
+}
+
+.banner .banner-text strong {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.banner .banner-text p {
+    font-size: 18px;
+    color: #605F62;
+    line-height: 28px;
+    margin-top: 30px;
+}
+
+.banner .banner-img {
+    width: 50%;
+    /* background-color: green; */
+    text-align: right;
+}
+
+.banner .banner-img img {
+    vertical-align: middle;
+    margin-right: 50px;
 }
 
 

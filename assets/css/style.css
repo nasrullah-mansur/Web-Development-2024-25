@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    --title-font: "Barlow", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+    --theme-color: #CF0000;
+    --text-color: #605F62;
+}
+
 /* Common CSS */
 * {
     margin: 0;
@@ -8,7 +15,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--body-font);
     /* font-optical-sizing: auto; */
     font-weight: 400;
     font-style: normal;
@@ -26,13 +33,20 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Barlow", sans-serif;
+    font-family: var(--title-font);
     font-style: normal;
     font-weight: 600;
 }
 
 a {
     text-decoration: none;
+}
+
+input:focus,
+textarea:focus {
+    /* outline-width: 1px;
+    outline-color: #CF0000; */
+    outline: 0;
 }
 
 .container {
@@ -54,6 +68,7 @@ a {
 }
 
 .section-title h2 {
+    max-width: 750px;
     font-size: 36px;
     line-height: 46px;
     margin-bottom: 30px;
@@ -318,6 +333,7 @@ a {
 
 .portfolio .filter-menu ul {
     display: flex;
+    margin-bottom: 30px;
 }
 
 .portfolio .filter-menu ul li {
@@ -330,4 +346,183 @@ a {
 
 .portfolio .filter-menu ul li.active {
     color: #CF0000;
+}
+
+.portfolio .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio .gallery-container .gallery-item {
+    /* width: calc((100% / 4) - 22.5px); */
+    width: calc((100% / 4) - (90px / 4));
+    margin-bottom: 30px;
+    padding: 10px 10px 15px;
+    border-radius: 5px;
+    background-color: rgba(207, 0, 0, 0.05);
+}
+
+.portfolio .gallery-container .gallery-item img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+}
+
+.portfolio .gallery-container .gallery-item span {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.portfolio .gallery-container .gallery-item strong {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--title-font);
+}
+
+/* Contact */
+.contact {
+    margin-bottom: 100px;
+}
+
+
+.contact .contact-form {
+    display: flex;
+    align-items: center;
+}
+
+.contact .contact-form form {
+    width: 60%;
+    padding: 20px 20px 30px;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+}
+
+.contact .contact-form form h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.contact .contact-form form .form-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .contact-form form .form-elements input {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 15px;
+    border: 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 18px;
+}
+
+/* .contact .contact-form form .form-elements input:nth-child(1),
+.contact .contact-form form .form-elements input:nth-child(2) {
+    width: calc(50% - (15px / 2))
+} */
+
+
+.contact .contact-form form .form-elements input.w-50 {
+    width: calc(50% - (15px / 2));
+}
+
+
+
+.contact .contact-form form .form-elements input::placeholder,
+.contact .contact-form form .form-elements textarea::placeholder {
+    font-size: 18px;
+    color: #D9D9D9;
+    transition: all ease .4s;
+}
+
+.contact .contact-form form .form-elements input:focus::placeholder,
+.contact .contact-form form .form-elements textarea:focus::placeholder {
+    color: #fff;
+}
+
+.contact .contact-form form .form-elements textarea {
+    width: 100%;
+    height: 115px;
+    margin-bottom: 15px;
+    border: 0;
+    padding: 15px 10px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    resize: vertical;
+    font-size: 18px;
+}
+
+.contact .contact-form form button {
+    width: 175px;
+    height: 56px;
+    background-color: #CF0000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact .contact-form .address {
+    width: 40%;
+    padding-left: 30px;
+}
+
+.contact .contact-form .address h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contact .contact-form .address > p {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.contact .contact-form .address ul li {
+    display: flex;
+    /* position: relative; */
+    /* padding-left: 80px; */
+    margin-bottom: 20px;
+}
+
+.contact .contact-form .address ul li .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #CF0000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.contact .contact-form .address ul li h4 {
+    font-size: 18px;
+}
+
+.contact .contact-form .address ul li p,
+.contact .contact-form .address ul li a {
+    font-size: 18px;
+    color: #605F62;
+    font-weight: 300;
+}
+.contact .contact-form .address ul li a:hover {
+    color: var(--theme-color);
 }

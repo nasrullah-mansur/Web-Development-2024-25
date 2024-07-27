@@ -1,0 +1,95 @@
+ /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+ /* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .container {
+        width: 960px;
+    }
+
+    .banner .banner-text {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .banner .banner-img {
+        display: none;
+    }
+
+    .about .image-area {
+        width: 100%;
+        order: 2;
+        margin-top: 50px;
+    }
+
+    .about .text-area {
+        width: 100%;
+        order: 1;
+        padding-left: 0;
+    }
+}
+
+ /* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .container {
+        width: 720px;
+    }
+
+    .menu .list {
+        display: none;
+    }
+
+    .menu .download-btn {
+        margin-left: auto;
+    }
+
+    .services .services-content .service-item {
+        width: calc(50% - 15px);
+    }
+
+    .portfolio .gallery-container .gallery-item {
+        width: calc((100% / 3) - (60px / 3));
+    }
+    
+}
+
+ /* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .container {
+        width: 540px;
+    }
+
+    .services .services-content .service-item {
+        width: 100%;
+        /* max-width: 160px; */
+    }
+
+    .portfolio .gallery-container .gallery-item {
+        width: calc((100% / 2) - (30px / 2));
+    }
+}
+
+ 
+ /* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .portfolio .gallery-container .gallery-item {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+

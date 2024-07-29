@@ -3,311 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figma to HTML</title>
-    <!-- Font Icons -->
-    <link rel="stylesheet" href="assets/fonticons/css/all.min.css">
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Responsive CSS -->
-     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
 </head>
 <body>
     
-    <!-- Menu Start -->
-     <header class="menu">
-        <div class="container">
-            <div class="logo">
-                <a href="#">
-                    <img src="assets/images/logo.png" alt="Our Logo">
-                </a>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 border">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
             </div>
-            <nav class="list">
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
-            </nav>
-            <div class="download-btn">
-                <a href="#">Download CV</a>
+            <div class="col-lg-4 col-md-6 border">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 border">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 border">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 border">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 border">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
             </div>
         </div>
-     </header>
-    <!-- Menu End -->
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+   
 
 
-    <!-- Banner Start -->
-     <section class="banner">
+    <!-- Gallery start -->
+     <section class="my-5 gallery">
         <div class="container">
-            <div class="banner-text">
-                <span>Hello, I am</span>
-                <h1>Nasrullah Mansur</h1>
-                <strong>Full-Stack Web Developer</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum corrupti consequatur itaque soluta magni, dolor, in error facilis sit! Doloribus!</p>
-
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-
-            </div>
-            <div class="banner-img">
-                <img src="assets/images/banner-img.png" alt="banner image">
-                <div class="projects">
-                    <span class="number">200<sup>+</sup></span>
-                    <span class="project-complete">projects completed</span>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item bg-secondary bg-gradient p-2 rounded">
+                        <img class="w-100" src="assets/images/1.png" alt="image">
+                        <span class="d-block">Web Design</span>
+                        <strong class="d-block">Personal Portfolio</strong>
+                    </div>
                 </div>
             </div>
         </div>
      </section>
-    <!-- Banner End -->
-
-    <!-- About Start -->
-     <section class="about section-margin-top">
-        <div class="container">
-            <div class="image-area">
-                <img src="assets/images/about-img.jpg" alt="about image">
-            </div>
-            <div class="text-area">
-                <div class="section-title">
-                    <span>About</span>
-                    <h2>Why do you hire me for your next website project?</h2>
-                </div>
-
-                <p>There are many variations of passages of Lorem. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by from injected humour, or randomised words which don't look even slightly believable.</p>
-                <p>If you are going to use a passage of Lorem Ipsum, If you are going to use a passage of Lorem Ipsum. you need total be sure there isn't anything embarrassing hidden in the middle of text.</p>
-
-                <a href="#">Hire me now</a>
-            </div>
-        </div>
-     </section>
-    <!-- About End -->
-
-    <!-- Services Start -->
-     <section class="services section-margin-top">
-        <div class="container">
-            <div class="section-title">
-                <span>My Services</span>
-                <h2>What I offer?</h2>
-            </div>
-
-            <div class="services-content">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium.</p>
-                </div>
-            </div>
-
-        </div>
-     </section>
-    <!-- Services End -->
-
-    <!-- Portfolio Start -->
-     <section class="portfolio section-margin-top">
-        <div class="container">
-            <div class="section-title">
-                <span>My portfloio</span>
-                <h2>My Recent Portfolio</h2>
-            </div>
-            <nav class="filter-menu">
-                <ul>
-                    <li class="active">All</li>
-                    <li>Web Design</li>
-                    <li>Web Development</li>
-                    <li>React JS</li>
-                    <li>Node JS</li>
-                    <li>Graphic Design</li>
-                </ul>        
-            </nav>
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/1.png" alt="image">
-                    <span>Web Design</span>
-                    <strong>Personal Portfolio</strong>
-                </div>
-            </div>
-        </div>
-     </section>
-    <!-- Portfolio End -->
-
-    <!-- Contact Start -->
-     <section class="contact section-margin-top">
-        <div class="container">
-            <div class="section-title">
-                <span>Contact me</span>
-                <h2>I'm always open to discussing product design work or partnerships.</h2>
-            </div>
-
-            <div class="contact-form">
-                <form action="">
-                    <h3>Send me a note</h3>
-                    <div class="form-elements">
-                        <input class="w-50" type="text" placeholder="Your name">
-                        <input class="w-50" type="email" placeholder="Your email">
-                        <input type="text" placeholder="Your subject">
-                        <textarea placeholder="Your Message ..."></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-    
-                <div class="address">
-                    <h3>My ADDRESS</h3>
-                    <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered</p>
-
-                    <ul>
-                        <li>
-                            <div class="icon">
-                                <i class="fa-regular fa-address-book"></i>
-                            </div>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Gajipur, Dhaka, Bangladesh</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <i class="fa-regular fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:nasrullah.cit.bd@gmail.com">nasrullah.cit.bd@gmail.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4>Phone</h4>
-                                <a href="tel:+8801728619733">+880 1728619733</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-     </section>
-    <!-- Contact End -->
-
-    <!-- Technology Start -->
-     <section class="technology section-margin-top">
-        <div class="container">
-            <div class="section-title">
-                <span>Technologies</span>
-                <h2>Which technologi es I use?</h2>
-            </div>
-
-            <div class="technology-icons">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-                <img src="assets/images/html.png" alt="html">
-            </div>
-        </div>
-     </section>
-    <!-- Technology End -->
+    <!-- Gallery end -->
 
 
-    <!-- Footer Start -->
-     <footer class="footer">
-        <div class="container">
-            <p>Copyright 2022 @ Nasrullah Mansur | All Right Resurved</p>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms & Condition</a></li>
-            </ul>
-        </div>
-     </footer>
-    <!-- Footer End -->
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>

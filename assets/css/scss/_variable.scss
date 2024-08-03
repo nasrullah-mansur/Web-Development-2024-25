@@ -1,0 +1,10 @@
+:root {
+    --test: red;
+}
+
+$body-color: #333;
+
+.test {
+    color: var(--test);
+    background-color: $body-color;
+}

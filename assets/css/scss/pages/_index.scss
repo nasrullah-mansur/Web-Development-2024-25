@@ -1,0 +1,11 @@
+
+
+.box {
+    @include background('test.jpg');
+}
+
+
+.box-2 {
+    @include background('another.jpg');
+    @include test;
+}

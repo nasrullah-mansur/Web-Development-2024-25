@@ -1,47 +1,81 @@
+// document.querySelector('h1').innerHTML = 'this is from js';
+
+// var x;
+// x = 50;
+// x = 70;
+// var x = 100;
 
 
 
-// document.write('Hello world');
-
-// console.log('this is my console area.');
-
-// var myH1 = document.getElementById('test').innerHTML;
-
-
-// document.getElementById('test').innerHTML = 'this is from javascript';
-
- 
-
-// var person1 = 100;
-// var person2 = 200;
+// const z = 'bangladesh';
+// // var carName;
+// carName = "Volvo";
+// var carName;
 
 
-// var myH1 = 'another hello';
-
-// console.log(myH1);
-
-let price = 10;
+// console.log(y);
+// console.log(z);
+// console.log(carName);
 
 
-var test1 = 'this is variable one';
-let test2 = 'this is variable two';
-const TEST3 = 'this is variable three';
+// let x = 70;
 
 
+// document.querySelector('h1').innerHTML = x;
+// if (true) {
+//     console.log(x);
+    
+//     var y = 100;
+    
+// }
 
+// console.log(y);
 
-test1 = 'this is re variable one';
-var test1 = 'this is re build variable one';
+let y = 100;
 
-
-test2 = 'this is re test two';
-test2 = 'this is something';
+// console.log(typeof y);
 
 
 
+// let arr = [12, 3, 3, 'batabi lebu'];
+
+// console.log(typeof arr);
+
+// console.log(arr[0]);
+// console.log(arr[1]);
+// console.log(arr[2]);
+// console.log(arr[3]);
 
 
-console.log(test2);
+// document.querySelector('h1').innerHTML = arr[0];
+
+
+const obj = {
+    carName: 'BMW',
+    model: 500,
+    weight: '5000kg',
+    start: function () {
+       console.log('car has been started.');
+    },
+    arr: [43,34,34,5]
+}
+
+console.log( obj.arr);
+
+// console.log(obj.start());
+
+let arr = [12, 3, 3, 'batabi lebu',{
+    carName: 'BMW',
+    model: 500,
+    weight: '5000kg',
+    arr: [2,3,4,5]
+}];
+
+console.log(arr[4]);
+
+
+
+
 
 
 

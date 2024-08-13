@@ -1,77 +1,52 @@
-// document.querySelector('h1').innerHTML = 'this is from js';
+let test1 = document.getElementById('demo');
 
-// var x;
-// x = 50;
-// x = 70;
-// var x = 100;
+let test2 = 'this is test';
 
-
-
-// const z = 'bangladesh';
-// // var carName;
-// carName = "Volvo";
-// var carName;
+let firstName = 'nasrullah';
+let lastName = 'mansur';
 
 
-// console.log(y);
-// console.log(z);
-// console.log(carName);
+// console.dir(a);
+
+let b = [
+    firstName,
+    lastName,
+    'hello',
+    [1,5,'hello', 'something', 'kisu ekta'],
+    null,
+    undefined,
+    true,
+];
 
 
-// let x = 70;
+
+let person = [
+    'something',
+    'junayed',
+    'ahmad',
+    14,
+    'class 5',
+    'section 2',
+    'dhaka',
+];
 
 
-// document.querySelector('h1').innerHTML = x;
-// if (true) {
-//     console.log(x);
+let student = {
+    something: 'something',
+    firstName: lastName,
+    secondName: 'ahmad',
     
-//     var y = 100;
-    
-// }
-
-// console.log(y);
-
-let y = 100;
-
-// console.log(typeof y);
-
-
-
-// let arr = [12, 3, 3, 'batabi lebu'];
-
-// console.log(typeof arr);
-
-// console.log(arr[0]);
-// console.log(arr[1]);
-// console.log(arr[2]);
-// console.log(arr[3]);
-
-
-// document.querySelector('h1').innerHTML = arr[0];
-
-
-const obj = {
-    carName: 'BMW',
-    model: 500,
-    weight: '5000kg',
-    start: function () {
-       console.log('car has been started.');
-    },
-    arr: [43,34,34,5]
+    myArr: [1,2,3,4,5],
+    section: 'section 2',
+    address: 'dhaka',
+    age: 14,
 }
 
-console.log( obj.arr);
+// console.log(person);
 
-// console.log(obj.start());
+let arr = student.myArr;
 
-let arr = [12, 3, 3, 'batabi lebu',{
-    carName: 'BMW',
-    model: 500,
-    weight: '5000kg',
-    arr: [2,3,4,5]
-}];
-
-console.log(arr[4]);
+console.log( arr[3] );
 
 
 
@@ -80,6 +55,108 @@ console.log(arr[4]);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// something 
+// console.log(person[2]);
+
+console.log(student.address);
 
 
 

@@ -1,26 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@600&display=swap');
+
 body {
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+h1 {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3d3d3d;
-    min-height: 100vh;
 }
 
-
-.digital-clock {
-    display: flex;
-    padding: 30px 50px;
-    background-color: #1dd1a1;
-    color: #fff;
-    font-size: 56px;
-    border-radius: 10px;
-
-    div {
-        margin: 0 5px;
-    }
-}

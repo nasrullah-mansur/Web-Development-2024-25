@@ -1,121 +1,104 @@
-// abc() // ei rokom ekta function ase;
-// aa = undefined; // ei rokom ekta variable ase;
 
-// types of function
-
-// function a() {
-
-// }
-
-// let a = () => {
-
+// function Student(name, roll, className, section) {
+//     this.name = name;
+//     this.roll = roll;
+//     this.className = className;
+//     this.section = section;
 // }
 
 
-// let a = function() {
 
-// }
+// let rashed = new Student('rashed', 30, 'Class 01', 'One');
 
-
-// (function() {
-//     console.log('this is auto run function');
-// })();
-
-// (() => {
-//     console.log('this is auto run function');
-// })();
+// console.log(rashed);
 
 
 
-// function a(name, english, math) {
-//     let test = {
-//         name: name,
-//         english: english,
-//         math: math,
+
+// let myObj = {
+//     firstName: 'Nasrullah',
+//     lastName: 'Mansur',
+//     roll: 12,
+//     className: 'class 5',
+//     section: 'two',
+//     fullName: function() {
+//         return this.firstName + ' ' + this.lastName;
 //     }
-
-//     // let test = [1,2,3,4];
-
-//     return test;
 // }
 
-// console.log( a('zayed', 30, 20) );
+// myObj.roll = 100;
+
+
+// console.log( myObj );
 
 
 
 
-// function mainFunction(myVar, myFun) {
-//     console.log(myVar + myFun());
-// }
+let arr = [1,2,3,4,5,6,7,8,9,10,22,45,0,9,33];
 
-// let hello = 'Hello ';
-
-let world = function() {
-    return 'World';
-};
-
-
-// // mainFunction(hello, world);
-// mainFunction(hello, function() {
-//                     return 'World';
-//                 });
-
-
-
-// let a = 0;
-// let timeFun = () => {
-//     console.log(a++);
-// }
-
-
-// // setTimeout(function() {
-// //     console.log('this is setTimeOut Function');
-// // }, 2000);
-
-// setInterval(timeFun, 1000);
-
-
-// let test1 = 10;
-// const test4 = 20;
-// var abdfasd= 3456;
-
-// var abc = 1000;
-
-
-// if(true) {
-//     var abc = 10;
-// }
-
-
-// console.log(abc);
-
-
-// abc();
-
-// function abc() {
-//     console.log('hello');
-    
-// }
-
-// console.log(aa);
-
-
-// var aa = 'kisu ekta';
+let output = arr[3];
+// output = arr.length;
+// output = arr.toString();
+// output = arr.join(' ');
+// output = arr.pop();
+// output = arr.push(9);
+// output = arr.shift();
+// output = arr.unshift('hello');
+// output = arr.concat([11,22,33,44,55]); // not useful; 
+// output = arr.flat();
+// output = arr.splice(4,2,'one', 'two');
+// output = arr.splice(4,2);
+// output = arr.splice(arr.length - 3, 3);
+// output = arr.splice(-3);
+// output = arr.slice(3,5);
+// output = arr.slice(3);
+// output = arr.slice(-3);
+// output = arr.slice(0, 3);
 
 
 
-// var aa;
-// aa = 'kisu ekta';
-
-// console.log(aa);
-
-// var aa = 'kisu ekta';
-
-// console.log(x);
-
-// x = 10;
-// const x;
+// 017********89
 
 
+// Array Search;
+// output = arr.indexOf('hello'); // -1 or index no;
+// output = arr.includes('helfslo'); // true or false;
+// output = arr.find(function(val) {
+//     return val == 'heasdfallo';
+// }); // value or undefined;
 
-// x name ekta variable ase jar value undefined;
+// Sorting;
+// output = arr.sort(function(a, b) {
+//     return b - a;
+// });
+
+// output = arr.sort();
+
+
+// Array Iteration
+// let arr2 = [2,3,4,5];
+// output = [...arr, ...arr2, 'hello', 'dunia'];
+
+// console.log(arr[0]);
+// console.log(arr[1]);
+// console.log(arr[2]);
+// console.log(arr[3]);
+// console.log(arr[4]);
+// console.log(arr[5]);
+// console.log(arr[6]);
+
+
+arr.forEach(function(item) {
+    console.log(item);
+});
+
+
+
+console.log(arr);
+console.log(output);
+
+
+
+
+
+

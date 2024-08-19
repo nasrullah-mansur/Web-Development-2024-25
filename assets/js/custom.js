@@ -1,168 +1,198 @@
-
-let students = [
+const foodItems = [
     {
         "id": 1,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "phone": "555-123-4567",
-        "image": "https://fakeimg.pl/500x500/cc6600"
+        "imageUrl": "https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg",
+        "name": "Burger",
+        "price": 8.99,
+        "quantity": 10,
+        "category": "Fast Food"
     },
     {
         "id": 2,
-        "name": "Jane Smith",
-        "email": "jane.smith@example.com",
-        "phone": "555-987-6543",
-        "image": "https://fakeimg.pl/500x500/cc6601"
+        "imageUrl": "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg",
+        "name": "Fruit Bowl",
+        "price": 7.49,
+        "quantity": 28,
+        "category": "Healthy"
     },
     {
         "id": 3,
-        "name": "Michael Johnson",
-        "email": "michael.johnson@example.com",
-        "phone": "555-456-7890",
-        "image": "https://fakeimg.pl/500x500/cc6602"
+        "imageUrl": "https://images.pexels.com/photos/248444/pexels-photo-248444.jpeg",
+        "name": "Sushi",
+        "price": 14.99,
+        "quantity": 25,
+        "category": "Japanese"
     },
     {
         "id": 4,
-        "name": "Emily Brown",
-        "email": "emily.brown@example.com",
-        "phone": "555-234-5678",
-        "image": "https://fakeimg.pl/500x500/cc6603"
+        "imageUrl": "https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg",
+        "name": "Ice Cream",
+        "price": 4.99,
+        "quantity": 35,
+        "category": "Dessert"
     },
     {
         "id": 5,
-        "name": "William Lee",
-        "email": "william.lee@example.com",
-        "phone": "555-765-4321",
-        "image": "https://fakeimg.pl/500x500/cc6604"
+        "imageUrl": "https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg",
+        "name": "Pizza",
+        "price": 12.99,
+        "quantity": 15,
+        "category": "Fast Food"
     },
     {
         "id": 6,
-        "name": "Olivia Wilson",
-        "email": "olivia.wilson@example.com",
-        "phone": "555-876-5432",
-        "image": "https://fakeimg.pl/500x500/cc6605"
+        "imageUrl": "https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg",
+        "name": "Salad",
+        "price": 6.99,
+        "quantity": 20,
+        "category": "Healthy"
     },
     {
         "id": 7,
-        "name": "Daniel Garcia",
-        "email": "daniel.garcia@example.com",
-        "phone": "555-678-9012",
-        "image": "https://fakeimg.pl/500x500/cc6606"
+        "imageUrl": "https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg",
+        "name": "Ramen",
+        "price": 11.99,
+        "quantity": 19,
+        "category": "Japanese"
     },
     {
         "id": 8,
-        "name": "Sophia Martinez",
-        "email": "sophia.martinez@example.com",
-        "phone": "555-890-1234",
-        "image": "https://fakeimg.pl/500x500/cc6607"
+        "imageUrl": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg",
+        "name": "Pancakes",
+        "price": 7.49,
+        "quantity": 17,
+        "category": "Dessert"
     },
     {
         "id": 9,
-        "name": "Ethan Lopez",
-        "email": "ethan.lopez@example.com",
-        "phone": "555-234-5678",
-        "image": "https://fakeimg.pl/500x500/cc6608"
+        "imageUrl": "https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg",
+        "name": "Tacos",
+        "price": 7.99,
+        "quantity": 18,
+        "category": "Fast Food"
     },
     {
         "id": 10,
-        "name": "Isabella Rodriguez",
-        "email": "isabella.rodriguez@example.com",
-        "phone": "555-876-5432",
-        "image": "https://fakeimg.pl/500x500/cc6609"
+        "imageUrl": "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg",
+        "name": "Avocado Toast",
+        "price": 8.99,
+        "quantity": 25,
+        "category": "Healthy"
     },
     {
         "id": 11,
-        "name": "James Hernandez",
-        "email": "james.hernandez@example.com",
-        "phone": "555-765-4321",
-        "image": "https://fakeimg.pl/500x500/cc6610"
+        "imageUrl": "https://images.pexels.com/photos/884596/pexels-photo-884596.jpeg",
+        "name": "Tempura",
+        "price": 13.49,
+        "quantity": 15,
+        "category": "Japanese"
     },
     {
         "id": 12,
-        "name": "Charlotte Lopez",
-        "email": "charlotte.lopez@example.com",
-        "phone": "555-901-2345",
-        "image": "https://fakeimg.pl/500x500/cc6611"
+        "imageUrl": "https://images.pexels.com/photos/3666/chocolate-dessert-brownies-cake.jpg",
+        "name": "Brownie",
+        "price": 3.99,
+        "quantity": 40,
+        "category": "Dessert"
     },
     {
         "id": 13,
-        "name": "Alexander Scott",
-        "email": "alexander.scott@example.com",
-        "phone": "555-789-0123",
-        "image": "https://fakeimg.pl/500x500/cc6612"
+        "imageUrl": "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg",
+        "name": "Chicken Wings",
+        "price": 9.99,
+        "quantity": 22,
+        "category": "Fast Food"
     },
     {
         "id": 14,
-        "name": "Mia Jenkins",
-        "email": "mia.jenkins@example.com",
-        "phone": "555-345-6789",
-        "image": "https://fakeimg.pl/500x500/cc6613"
+        "imageUrl": "https://images.pexels.com/photos/990439/pexels-photo-990439.jpeg",
+        "name": "Smoothie",
+        "price": 5.49,
+        "quantity": 30,
+        "category": "Healthy"
     },
     {
         "id": 15,
-        "name": "William Adams",
-        "email": "william.adams@example.com",
-        "phone": "555-012-3456",
-        "image": "https://fakeimg.pl/500x500/cc6614"
+        "imageUrl": "https://images.pexels.com/photos/13441988/pexels-photo-13441988.jpeg",
+        "name": "Udon",
+        "price": 10.99,
+        "quantity": 22,
+        "category": "Japanese"
     },
     {
         "id": 16,
-        "name": "Sakura Tanaka",
-        "email": "sakura.tanaka@example.com",
-        "phone": "555-123-4567",
-        "image": "https://fakeimg.pl/500x500/1f77b4"
+        "imageUrl": "https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg",
+        "name": "Cheesecake",
+        "price": 6.99,
+        "quantity": 30,
+        "category": "Dessert"
     },
     {
         "id": 17,
-        "name": "Noah Roberts",
-        "email": "noah.roberts@example.com",
-        "phone": "555-890-1234",
-        "image": "https://fakeimg.pl/500x500/cc6616"
+        "imageUrl": "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg",
+        "name": "Sandwich",
+        "price": 5.99,
+        "quantity": 12,
+        "category": "Fast Food"
     },
     {
         "id": 18,
-        "name": "Ava Turner",
-        "email": "ava.turner@example.com",
-        "phone": "555-234-5678",
-        "image": "https://fakeimg.pl/500x500/cc6617"
+        "imageUrl": "https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg",
+        "name": "Quinoa Salad",
+        "price": 9.99,
+        "quantity": 17,
+        "category": "Healthy"
     },
     {
         "id": 19,
-        "name": "Ethan Parker",
-        "email": "ethan.parker@example.com",
-        "phone": "555-345-6789",
-        "image": "https://fakeimg.pl/500x500/cc6618"
+        "imageUrl": "https://images.pexels.com/photos/26546969/pexels-photo-26546969/free-photo-of-close-up-of-a-dish-with-meat-fries-and-rice.jpeg",
+        "name": "Teriyaki Chicken",
+        "price": 12.99,
+        "quantity": 18,
+        "category": "Japanese"
     },
     {
         "id": 20,
-        "name": "Sophia Evans",
-        "email": "sophia.evans@example.com",
-        "phone": "555-890-1234",
-        "image": "https://fakeimg.pl/500x500/cc6619"
+        "imageUrl": "https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg",
+        "name": "Cupcake",
+        "price": 2.99,
+        "quantity": 50,
+        "category": "Dessert"
     }
-]
+];
 
 
 
-function studentElement(item) {
-    return `<div class="col-lg-3 mb-4">
-                    <div class="student-data text-center p-2 border bg-light">
-                        <img class="img-fluid" src="${item.image}" alt="image">
-                        <h4 class="text-bold pt-2">${item.name}</h4>
-                        <p class="m-0"><strong>Email:</strong> ${item.email}</p>
-                        <p><strong>Phone:</strong> ${item.phone}</p>
-                    </div>
-                </div>`;
+function foodItemElement(item) {
+    return `<div class="col-lg-3">
+                <div class="food-item bg-light p-2 mb-4 border shadow-sm">
+                  <img class="img-fluid" src="${item.imageUrl}" alt="food image">
+                  <h4 class="mt-2 mb-1">${item.name}</h4>
+                  <span class="text-danger">${item.category}</span>
+                  <hr class="bg-light">
+                  <div class="card-footer d-flex justify-content-between">
+                    <span>Price: $${item.price}</span>
+                    <span>Available: ${item.quantity}</span>
+                  </div>
+
+                  <a class="d-block text-center bg-warning mt-2 text-decoration-none p-2 text-black text-bold" href="#">Add to cart</a>
+                </div>
+              </div>`;
 }
 
 
-let totalStudent = [];
 
-students.forEach(function(item) {
-    totalStudent.push( studentElement(item) );
-})
 
-document.getElementById('student_area').innerHTML = totalStudent.join(' ');
+let finalElements = foodItems.map(function(item) {
+    return foodItemElement(item);
+});
+
+document.getElementById('food-galleries').innerHTML = finalElements.join('');
+
+
+
+
+
 
 
 

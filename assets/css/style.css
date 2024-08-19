@@ -16,3 +16,8 @@ h1 {
     font-style: normal;
 }
 
+img {
+  height: 230px !important;
+  object-fit: cover;
+}
+

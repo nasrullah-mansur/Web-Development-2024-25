@@ -1,104 +1,86 @@
 
-// function Student(name, roll, className, section) {
-//     this.name = name;
-//     this.roll = roll;
-//     this.className = className;
-//     this.section = section;
+
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
+
+let test = [
+    'student one',
+    'student two',
+    'student three',
+    'student four',
+    'student five',
+    'student six',
+    'student seven',
+    'student eight',
+    'student nine',
+    'student ten',
+    'test',
+    'test',
+]
+
+
+// for(let i = 1; i <= 20; i++){
+//     console.log(i);
+// }
+
+// console.log(test[0]);
+// console.log(test[1]);
+// console.log(test[2]);
+// console.log(test[3]);
+
+// for(let j = 0; j < test.length; j++) {
+//     console.log( test[j] );
 // }
 
 
+// for(let a = 0; 0 == 0; a++) {
 
-// let rashed = new Student('rashed', 30, 'Class 01', 'One');
-
-// console.log(rashed);
-
-
-
-
-// let myObj = {
-//     firstName: 'Nasrullah',
-//     lastName: 'Mansur',
-//     roll: 12,
-//     className: 'class 5',
-//     section: 'two',
-//     fullName: function() {
-//         return this.firstName + ' ' + this.lastName;
-//     }
 // }
 
-// myObj.roll = 100;
+// let newArr = [
+//     'Name: student one',
+//     'Name: student two',
+// ]
 
+let newArr = test.map(function(item) {
+    return 'Name: ' + item;
+});
 
-// console.log( myObj );
+// console.log(newArr);
 
+// let myNum = [2,4,6,33,65,23,45,67];
 
-
-
-let arr = [1,2,3,4,5,6,7,8,9,10,22,45,0,9,33];
-
-let output = arr[3];
-// output = arr.length;
-// output = arr.toString();
-// output = arr.join(' ');
-// output = arr.pop();
-// output = arr.push(9);
-// output = arr.shift();
-// output = arr.unshift('hello');
-// output = arr.concat([11,22,33,44,55]); // not useful; 
-// output = arr.flat();
-// output = arr.splice(4,2,'one', 'two');
-// output = arr.splice(4,2);
-// output = arr.splice(arr.length - 3, 3);
-// output = arr.splice(-3);
-// output = arr.slice(3,5);
-// output = arr.slice(3);
-// output = arr.slice(-3);
-// output = arr.slice(0, 3);
-
-
-
-// 017********89
-
-
-// Array Search;
-// output = arr.indexOf('hello'); // -1 or index no;
-// output = arr.includes('helfslo'); // true or false;
-// output = arr.find(function(val) {
-//     return val == 'heasdfallo';
-// }); // value or undefined;
-
-// Sorting;
-// output = arr.sort(function(a, b) {
-//     return b - a;
+// let myFilter = test.filter(function(item) {
+//     return item == 'test' || item == 'student one' || item == 'student two';
 // });
 
-// output = arr.sort();
+// let filter2 = myNum.filter(function(n) {
+//     return n > 10;
+// });
+
+// let subtotal = myNum.reduce(function(total, num) {
+//     return total + num;
+// }, 0);
+
+// console.log(subtotal);
 
 
-// Array Iteration
-// let arr2 = [2,3,4,5];
-// output = [...arr, ...arr2, 'hello', 'dunia'];
-
-// console.log(arr[0]);
-// console.log(arr[1]);
-// console.log(arr[2]);
-// console.log(arr[3]);
-// console.log(arr[4]);
-// console.log(arr[5]);
-// console.log(arr[6]);
 
 
-arr.forEach(function(item) {
-    console.log(item);
+// ***************** Project Coding Type One **********************
+let foodItemsNewArrayWithElements = [];
+
+foodItems.forEach(function(item) {
+    foodItemsNewArrayWithElements.push( foodItemElement(item) );
 });
 
 
-
-console.log(arr);
-console.log(output);
+document.getElementById('food-galleries').innerHTML = foodItemsNewArrayWithElements.join('');
 
 
-
-
-
-
+// ***************** Project Coding Type Two **********************
+foodItems.forEach(function(item) {
+    document.getElementById('food-galleries').innerHTML += foodItemElement(item);
+})

@@ -1,7 +1,7 @@
 const foodItems = [
     {
         "id": 1,
-        "imageUrl": "https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg",
+        "imageUrl": "assets/images/one.jpeg",
         "name": "Burger",
         "price": 8.99,
         "quantity": 10,
@@ -162,6 +162,13 @@ const foodItems = [
 ];
 
 
+let myFilter = {
+    sortingBy: 'price',
+    categoryBy: 'all',
+}
+
+
+
 
 function foodItemElement(item) {
     return `<div class="col-lg-3">
@@ -182,16 +189,87 @@ function foodItemElement(item) {
 
 
 
+function runFoodItems(filterObj) {
+    let finalElements;
 
-let finalElements = foodItems.map(function(item) {
-    return foodItemElement(item);
-});
+    // // Filter By Category;
+    // if(filterObj.categoryBy != 'all') {
+    //     finalElements = foodItems.filter(function(item) {
+    //         return item.category == filterObj.categoryBy;
+    //     });         
+    // }
 
-document.getElementById('food-galleries').innerHTML = finalElements.join('');
+    // // Sorting By;
+    // if(filterObj.sortingBy != null) {
+    //     let sortingByValue = filterObj.sortingBy;
+
+    //     finalElements = finalElements.sort(function(a, b) {
+    //         return a[sortingByValue] - b[sortingByValue];
+    //     });
+    // }
+
+    // else {
+    //     finalElements = foodItems.map(function(item) {
+    //         return foodItemElement(item);
+    //     });
+    // }
+
+    
+
+
+    if(filterObj.categoryBy != 'all') {
+        if(filterObj.sortingBy != null) {
+            // Filter By Category;
+            finalElements = foodItems.filter(function(item) {
+                return item.category == filterObj.categoryBy;
+            }); 
+
+            // Sorting By 
+            let sortingByValue = filterObj.sortingBy;
+            finalElements = finalElements.sort(function(a, b) {
+                return a[sortingByValue] - b[sortingByValue];
+            });
+        }
+
+        else {
+           // Filter By Category;
+            finalElements = foodItems.filter(function(item) {
+                return item.category == filterObj.categoryBy;
+            });  
+        }
+    } 
+    
+    else {
+        finalElements = foodItems.map(function(item) {
+            return item;
+        });
+    }
 
 
 
+    finalElements = finalElements.map(function(item) {
+        return foodItemElement(item);
+    });
+    
+    document.getElementById('food-galleries').innerHTML = finalElements.join('');
+}
 
+
+runFoodItems(myFilter);
+
+
+
+// DOM;
+
+// let myElement = document.getElementById('list');
+// let myElement = document.querySelector('#list');
+
+let myElement = document.querySelectorAll('li');
+myElement = document.getElementsByClassName('test');
+myElement = document.getElementsByTagName('li');
+
+
+console.log(myElement);
 
 
 

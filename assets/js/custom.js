@@ -161,116 +161,117 @@ const foodItems = [
     }
 ];
 
+// let myObj = {
+//     firstName: 'First',
+//     lastName: 'Last', 
+//     fullName: () => {
+//         return myObj.firstName + ' ' + myObj.lastName;
+//     },
+//     "another key": 'something',
+// }
 
-let myFilter = {
-    sortingBy: 'price',
-    categoryBy: 'all',
-}
+// // fullName();
 
+// let output = myObj.fullName();
+// let output = myObj['firstName'];
+// output = myObj.firstName;
+// output = myObj["another key"];
 
-
-
-function foodItemElement(item) {
-    return `<div class="col-lg-3">
-                <div class="food-item bg-light p-2 mb-4 border shadow-sm">
-                  <img class="img-fluid" src="${item.imageUrl}" alt="food image">
-                  <h4 class="mt-2 mb-1">${item.name}</h4>
-                  <span class="text-danger">${item.category}</span>
-                  <hr class="bg-light">
-                  <div class="card-footer d-flex justify-content-between">
-                    <span>Price: $${item.price}</span>
-                    <span>Available: ${item.quantity}</span>
-                  </div>
-
-                  <a class="d-block text-center bg-warning mt-2 text-decoration-none p-2 text-black text-bold" href="#">Add to cart</a>
-                </div>
-              </div>`;
-}
+// console.log(output);
 
 
-
-function runFoodItems(filterObj) {
-    let finalElements;
-
-    // // Filter By Category;
-    // if(filterObj.categoryBy != 'all') {
-    //     finalElements = foodItems.filter(function(item) {
-    //         return item.category == filterObj.categoryBy;
-    //     });         
-    // }
-
-    // // Sorting By;
-    // if(filterObj.sortingBy != null) {
-    //     let sortingByValue = filterObj.sortingBy;
-
-    //     finalElements = finalElements.sort(function(a, b) {
-    //         return a[sortingByValue] - b[sortingByValue];
-    //     });
-    // }
-
-    // else {
-    //     finalElements = foodItems.map(function(item) {
-    //         return foodItemElement(item);
-    //     });
-    // }
-
-    
+// let myFun = () => {
+//     return 'this is from arrow function';
+// }
 
 
-    if(filterObj.categoryBy != 'all') {
-        if(filterObj.sortingBy != null) {
-            // Filter By Category;
-            finalElements = foodItems.filter(function(item) {
-                return item.category == filterObj.categoryBy;
-            }); 
+// let myFun = () => (
+//     'this is from arrow function'
+// );
 
-            // Sorting By 
-            let sortingByValue = filterObj.sortingBy;
-            finalElements = finalElements.sort(function(a, b) {
-                return a[sortingByValue] - b[sortingByValue];
-            });
-        }
 
-        else {
-           // Filter By Category;
-            finalElements = foodItems.filter(function(item) {
-                return item.category == filterObj.categoryBy;
-            });  
-        }
-    } 
-    
-    else {
-        finalElements = foodItems.map(function(item) {
-            return item;
-        });
-    }
+// let myFun = () => 'this is from arrow function';
+
+// let myFun = (p) => 'this is from arrow function';
+
+
+// let myFun = p => 'this is from arrow function' + p;
 
 
 
-    finalElements = finalElements.map(function(item) {
-        return foodItemElement(item);
+
+
+// console.log( myFun(123) );
+
+// let myMess = function() {
+//     console.log("This is an anonymous function!");
+// }
+
+
+// setTimeout(myMess, 1000);
+
+
+// let myObj2 = function(name, age) {
+//     return {
+//         name,
+//         age,
+//     }
+// }
+
+
+// console.log(myObj2('Sazid', 18));
+
+
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+
+// let StudentOne = new Person('sazid', 18);
+
+
+// console.log(StudentOne);
+
+
+
+
+
+
+// ********************************************************************* //
+
+
+
+
+
+
+
+
+async function myAsyncFunction() {
+    let a = null;
+    let first = await setTimeout(function() {
+        a = [1,2,3];
+    }, 2000);
+
+    let final = await a.forEach(element => {
+        console.log(element);
     });
-    
-    document.getElementById('food-galleries').innerHTML = finalElements.join('');
 }
 
-
-runFoodItems(myFilter);
-
+myAsyncFunction();
 
 
-// DOM;
+testFunction();
+testTwoFunction();
 
-// let myElement = document.getElementById('list');
-// let myElement = document.querySelector('#list');
+function testFunction() {
+    console.log('this is test function');    
+}
 
-let myElement = document.querySelectorAll('li');
-myElement = document.getElementsByClassName('test');
-myElement = document.getElementsByTagName('li');
-
-
-console.log(myElement);
-
+function testTwoFunction() {
+    console.log('this is test two function');
+}
 
 
 

@@ -161,118 +161,59 @@ const foodItems = [
     }
 ];
 
-// let myObj = {
-//     firstName: 'First',
-//     lastName: 'Last', 
-//     fullName: () => {
-//         return myObj.firstName + ' ' + myObj.lastName;
-//     },
-//     "another key": 'something',
-// }
 
-// // fullName();
+let a = [1,2,3,4];
 
-// let output = myObj.fullName();
-// let output = myObj['firstName'];
-// output = myObj.firstName;
-// output = myObj["another key"];
+a = new Array(1,2,3,4);
+a = new Array(4);
+a = Array.of(1,2,3,4);
+a = Array.from('hello');
 
-// console.log(output);
+// let test = document.getElementById('test').innerHTML;
+// let testData = Array.from(test);
 
+// testData = testData.map(function(item) {
+//     return `<span class="d-block">${item}</span>`;
+// })
 
-// let myFun = () => {
-//     return 'this is from arrow function';
-// }
+// document.getElementById('test').innerHTML = testData.join('');
+
+// console.log(test);
+// console.log(testData);
 
 
-// let myFun = () => (
-//     'this is from arrow function'
-// );
+let newArr = [2,4,6,8];
+let fee = 3;
 
 
-// let myFun = () => 'this is from arrow function';
+newArr = Array.from(newArr, function(n) {
+    return n + fee;
+});
 
-// let myFun = (p) => 'this is from arrow function';
+newArr = Array.from(newArr, n => n + fee);
 
-
-// let myFun = p => 'this is from arrow function' + p;
-
-
-
+// console.log(newArr);
 
 
-// console.log( myFun(123) );
+let abc = [...newArr, 11,22,33,44];
 
-// let myMess = function() {
-//     console.log("This is an anonymous function!");
-// }
+// console.log(abc);
 
+// a = Array(5).fill(null);
 
-// setTimeout(myMess, 1000);
-
-
-// let myObj2 = function(name, age) {
-//     return {
-//         name,
-//         age,
-//     }
-// }
+// console.log(a);
 
 
-// console.log(myObj2('Sazid', 18));
+let myLis = document.getElementsByTagName('li');
 
+let htmlArray = Array.from(myLis);
 
+myLis.forEach(function(e) {
+    console.log(e);
+})
 
-// function Person(name, age) {
-//     this.name = name;
-//     this.age = age;
-// }
-
-
-// let StudentOne = new Person('sazid', 18);
-
-
-// console.log(StudentOne);
-
-
-
-
-
-
-// ********************************************************************* //
-
-
-
-
-
-
-
-
-async function myAsyncFunction() {
-    let a = null;
-    let first = await setTimeout(function() {
-        a = [1,2,3];
-    }, 2000);
-
-    let final = await a.forEach(element => {
-        console.log(element);
-    });
-}
-
-myAsyncFunction();
-
-
-testFunction();
-testTwoFunction();
-
-function testFunction() {
-    console.log('this is test function');    
-}
-
-function testTwoFunction() {
-    console.log('this is test two function');
-}
-
+console.log(myLis);
+console.log(htmlArray);
 
 
 

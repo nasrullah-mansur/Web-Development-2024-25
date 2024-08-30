@@ -21,3 +21,18 @@ img {
   object-fit: cover;
 }
 
+
+#test span {
+  color: red;
+  animation: testAni 2s infinite;
+  width: 100px;
+}
+
+@keyframes testAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

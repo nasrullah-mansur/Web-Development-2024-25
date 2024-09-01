@@ -36,3 +36,8 @@ img {
     transform: rotate(360deg);
   }
 }
+
+
+.js {
+  color: red;
+}

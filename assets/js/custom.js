@@ -1,71 +1,72 @@
-// DOM = Document Object Model; 
-
-// Dom select;
-// Dom Create;
-// Dom Style;
-// Dom Remove;
-
-// Dom Select;
-let elem = document.getElementById('test');
-// elem = document.getElementsByClassName('one');
-// elem = document.querySelectorAll('.one');
-// elem = document.getElementsByTagName('li');
-// elem = document.querySelector('.one');
-
-// // elem = elem.getAttribute('id');
-// elem.setAttribute('id', 'another');
-
-// elem = document.querySelector('input');
-// elem.setAttribute('type', 'text')
-
-// Dom Style;
-// elem = elem.style.color = 'red';
-
-// let test = {
-//     one: '',
-//     two: 'two'
-// }
-
-// test.one = 'another';
-
-// elem.style.color = 'red';
-// elem.style.backgroundColor = 'green';
-// elem.style.fontSize = '26px';
-
-let css = `
-    color: red;
-    background-color: green;
-    font-size: 26px;
-`;
-
-// elem.style.cssText = css;
-
-// console.dir(elem);
+let myElem = document.getElementById('one');
 
 
-let div = document.createElement('div');
-div.textContent = "this is div created by javascript";
+// myElem.addEventListener('click', function() {
+//     let color = myElem.style.backgroundColor;
+//     if(color == 'gray') {
+//         myElem.style.backgroundColor = 'red';
+//     } else {
+//         myElem.style.backgroundColor = 'gray';
+//     }
+// });
 
-let myElem = "<div class='js'>this is test</div>";
-// document.getElementById('first').append(div);
-// document.getElementById('first').prepend(div);
-// document.getElementById('first').before(div);
-// document.getElementById('first').after(div);
+let myInput = document.querySelector('input');
+let myBtn = document.querySelector('button');
 
-// document.getElementById('first').innerHTML += (myElem);
+myBtn.addEventListener('click', function(e) {
 
-let myH1Elem = document.getElementById('first');
+    let tag = e.target;
 
-myH1Elem.insertAdjacentHTML('afterend', myElem);
+    let inputType = myInput.getAttribute('type');
 
-// console.log(div);
+    if(inputType  == 'text') {
+        myInput.setAttribute('type', 'password');
+        // myBtn.textContent = 'Show';
+        tag.textContent = 'Show';
+    } else {
+        myInput.setAttribute('type', 'text');
+        // myBtn.textContent = 'Hide';
+        tag.textContent = "Hide";
+    }
 
 
-// elem = elem.nextSibling;
-// elem = elem.previousSibling;
-// elem = elem.parentElement;
-// elem = elem.children;
 
-elem = myH1Elem.childNodes;
 
-console.log(elem);
+});
+
+
+
+
+myElem.addEventListener('click', function() {
+    let className = myElem.classList;
+
+    // let checkClassName = className.contains('blue');
+
+    // if(checkClassName == true) {
+    //     myElem.classList.remove('blue');
+    //     myElem.classList.add('green');
+    // } else {
+    //     myElem.classList.add('blue');
+    //     myElem.classList.remove('green');
+    // }
+
+
+    myElem.classList.toggle('blue');
+    myElem.classList.toggle('green');
+    
+});
+
+
+let myFun = function(a, b) {
+    console.log(b);
+    
+    let color = myElem.style.backgroundColor;
+    if(color == 'gray') {
+        myElem.style.backgroundColor = 'red';
+    } else {
+        myElem.style.backgroundColor = 'gray';
+    }
+}
+
+
+myElem.addEventListener('click', myFun.bind(this, "abc"));

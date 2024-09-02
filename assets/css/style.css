@@ -16,28 +16,16 @@ h1 {
     font-style: normal;
 }
 
-img {
-  height: 230px !important;
-  object-fit: cover;
+#one {
+  width: 400px;
+  height: 400px;
+  /* background-color: gray; */
 }
 
-
-#test span {
-  color: red;
-  animation: testAni 2s infinite;
-  width: 100px;
+.blue {
+  background-color: blueviolet;
 }
 
-@keyframes testAni {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-.js {
-  color: red;
+.green {
+  background-color: green;
 }

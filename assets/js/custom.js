@@ -1,72 +1,90 @@
-let myElem = document.getElementById('one');
 
 
-// myElem.addEventListener('click', function() {
-//     let color = myElem.style.backgroundColor;
-//     if(color == 'gray') {
-//         myElem.style.backgroundColor = 'red';
-//     } else {
-//         myElem.style.backgroundColor = 'gray';
-//     }
-// });
+let myClockElement = document.querySelector('.clock');
+myClockElement.append(stripeArea());
+myClockElement.append(numberArea());
+myClockElement.append(handlerArea());
 
-let myInput = document.querySelector('input');
-let myBtn = document.querySelector('button');
+function stripeArea() {
+    let createParentDiv = document.createElement('div');
+    createParentDiv.classList.add('stripe-area');
 
-myBtn.addEventListener('click', function(e) {
+    for(let i = 0; i < 60; i++) {
+        let createSpanTagForStripe = document.createElement('span');
 
-    let tag = e.target;
+        createSpanTagForStripe.style.transform = `rotate(${i * 6}deg)`;
 
-    let inputType = myInput.getAttribute('type');
+        if(i % 5 == 0) {
+            createSpanTagForStripe.classList.add('stripe', 'circle');
+        } else {
+            createSpanTagForStripe.classList.add('stripe');
+        }
 
-    if(inputType  == 'text') {
-        myInput.setAttribute('type', 'password');
-        // myBtn.textContent = 'Show';
-        tag.textContent = 'Show';
-    } else {
-        myInput.setAttribute('type', 'text');
-        // myBtn.textContent = 'Hide';
-        tag.textContent = "Hide";
+
+        createParentDiv.append(createSpanTagForStripe);
     }
 
-
-
-
-});
-
-
-
-
-myElem.addEventListener('click', function() {
-    let className = myElem.classList;
-
-    // let checkClassName = className.contains('blue');
-
-    // if(checkClassName == true) {
-    //     myElem.classList.remove('blue');
-    //     myElem.classList.add('green');
-    // } else {
-    //     myElem.classList.add('blue');
-    //     myElem.classList.remove('green');
-    // }
-
-
-    myElem.classList.toggle('blue');
-    myElem.classList.toggle('green');
-    
-});
-
-
-let myFun = function(a, b) {
-    console.log(b);
-    
-    let color = myElem.style.backgroundColor;
-    if(color == 'gray') {
-        myElem.style.backgroundColor = 'red';
-    } else {
-        myElem.style.backgroundColor = 'gray';
-    }
+    return createParentDiv;
 }
 
 
-myElem.addEventListener('click', myFun.bind(this, "abc"));
+function numberArea() {
+    let numberAreaParentElement = document.createElement('div');
+    numberAreaParentElement.classList.add('number-area');
+
+    for(let i = 1; i <= 12; i++) {
+        let createNumberDive = document.createElement('div');
+        createNumberDive.classList.add('number');
+        createNumberDive.style.transform = `rotate(${i * 30}deg)`;
+
+        let createSpanTagForNumber = document.createElement('span');
+        createSpanTagForNumber.textContent = i;
+        createSpanTagForNumber.style.transform = `rotate(-${i * 30}deg)`;
+
+        createNumberDive.append(createSpanTagForNumber);
+        numberAreaParentElement.append(createNumberDive);
+
+    }
+
+    return numberAreaParentElement;
+}
+
+function handlerArea() {
+    let handlerParentElement = document.createElement('div');
+    handlerParentElement.classList.add('time-handler');
+    let hrElement = document.createElement('div');
+    hrElement.classList.add('hr');
+    let minElement = document.createElement('div');
+    minElement.classList.add('min');
+    let secElement = document.createElement('div');
+    secElement.classList.add('sec');
+
+    handlerParentElement.append(hrElement);
+    handlerParentElement.append(minElement);
+    handlerParentElement.append(secElement);
+
+    return handlerParentElement;
+}
+
+function startOurClock() {
+
+    let d = new Date();
+    let sec = d.getSeconds() / 60;
+    let min = (sec + d.getMinutes()) / 60;
+    let hr = (min + d.getHours()) / 12;
+
+    let secElem = document.querySelector('.sec');
+    let minElem = document.querySelector('.min');
+    let hrElem = document.querySelector('.hr');
+
+
+    secElem.style.transform = `rotate(${sec * 360}deg)`;
+    minElem.style.transform = `rotate(${min * 360}deg)`;
+    hrElem.style.transform = `rotate(${hr * 360}deg)`;
+    
+}
+
+startOurClock();
+
+setInterval(startOurClock, 1000);
+

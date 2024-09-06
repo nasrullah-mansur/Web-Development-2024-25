@@ -1,90 +1,198 @@
 
 
-let myClockElement = document.querySelector('.clock');
-myClockElement.append(stripeArea());
-myClockElement.append(numberArea());
-myClockElement.append(handlerArea());
-
-function stripeArea() {
-    let createParentDiv = document.createElement('div');
-    createParentDiv.classList.add('stripe-area');
-
-    for(let i = 0; i < 60; i++) {
-        let createSpanTagForStripe = document.createElement('span');
-
-        createSpanTagForStripe.style.transform = `rotate(${i * 6}deg)`;
-
-        if(i % 5 == 0) {
-            createSpanTagForStripe.classList.add('stripe', 'circle');
-        } else {
-            createSpanTagForStripe.classList.add('stripe');
-        }
+// 1. registration;
+// 2. course choose;
+// 3. make payment;
+// 4. keep learning;
+// 5. complete course;
+// 6. take exam;
+// 7. take certificate;
 
 
-        createParentDiv.append(createSpanTagForStripe);
-    }
 
-    return createParentDiv;
+
+// function registration(callback) {
+//     console.log('Log in successful');
+//     callback();
+// }
+
+// function courseChoose(callback) {
+//     let choose = false;
+//     if(choose) {
+//         console.log('Please choose your favorite course');
+//         callback();
+//     }
+
+// }
+
+// function makePayment(callback) {
+//     console.log('Please pay first');
+
+//     callback();
+// }
+
+// function keepLearning(callback) {
+//     setTimeout(() => {
+//         console.log('Well done! your payment is successful, Please keep learning.');
+
+//         callback();
+//     }, 2000);
+// }
+
+// function completeCourse(callback) {
+//     console.log('Well done! you have completed your course.');
+
+//     callback();
+// }
+
+// function takeExam(callback) {
+//     let result = 'fail';
+//     if(result != 'fail') {
+//         console.log('Well done! you have passed your exam.');
+
+//         callback();
+//     } else {
+//         console.log('Sorry! you are failed. Please take exam again.');
+//     }
+// }
+
+// function takeCertificate() {
+//     console.log('Your certificate is ready. Please contact us.');
+// }
+
+
+
+// registration();
+// courseChoose();
+// makePayment();
+// keepLearning();
+// completeCourse();
+// takeExam();
+
+
+// registration(function() {
+//     courseChoose(function() {
+//         makePayment(function() {
+//             keepLearning(function() {
+//                 completeCourse(function() {
+//                     takeExam(function() {
+//                         takeCertificate();
+//                     });
+//                 });
+//             });
+//         });
+//     });
+// });
+
+
+
+
+// ********************
+// *************************** Promises *********************
+
+function registration() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            console.log('Log in successful');
+            resolve();
+        }, 2000)
+    });
+
 }
 
-
-function numberArea() {
-    let numberAreaParentElement = document.createElement('div');
-    numberAreaParentElement.classList.add('number-area');
-
-    for(let i = 1; i <= 12; i++) {
-        let createNumberDive = document.createElement('div');
-        createNumberDive.classList.add('number');
-        createNumberDive.style.transform = `rotate(${i * 30}deg)`;
-
-        let createSpanTagForNumber = document.createElement('span');
-        createSpanTagForNumber.textContent = i;
-        createSpanTagForNumber.style.transform = `rotate(-${i * 30}deg)`;
-
-        createNumberDive.append(createSpanTagForNumber);
-        numberAreaParentElement.append(createNumberDive);
-
-    }
-
-    return numberAreaParentElement;
-}
-
-function handlerArea() {
-    let handlerParentElement = document.createElement('div');
-    handlerParentElement.classList.add('time-handler');
-    let hrElement = document.createElement('div');
-    hrElement.classList.add('hr');
-    let minElement = document.createElement('div');
-    minElement.classList.add('min');
-    let secElement = document.createElement('div');
-    secElement.classList.add('sec');
-
-    handlerParentElement.append(hrElement);
-    handlerParentElement.append(minElement);
-    handlerParentElement.append(secElement);
-
-    return handlerParentElement;
-}
-
-function startOurClock() {
-
-    let d = new Date();
-    let sec = d.getSeconds() / 60;
-    let min = (sec + d.getMinutes()) / 60;
-    let hr = (min + d.getHours()) / 12;
-
-    let secElem = document.querySelector('.sec');
-    let minElem = document.querySelector('.min');
-    let hrElem = document.querySelector('.hr');
-
-
-    secElem.style.transform = `rotate(${sec * 360}deg)`;
-    minElem.style.transform = `rotate(${min * 360}deg)`;
-    hrElem.style.transform = `rotate(${hr * 360}deg)`;
+function courseChoose() {
     
+    return new Promise(function(resolve) {
+        console.log('Please choose your favorite course');
+        resolve();
+    });
+
 }
 
-startOurClock();
+function makePayment() {
 
-setInterval(startOurClock, 1000);
+    return new Promise(function(resolve) {
+        setTimeout(() => {
+            console.log('Please pay first');
+            resolve();
+        }, 2000);
+    });
+
+}
+
+function keepLearning(callback) {
+    setTimeout(() => {
+        console.log('Well done! your payment is successful, Please keep learning.');
+
+        callback();
+    }, 2000);
+}
+
+function completeCourse(callback) {
+    console.log('Well done! you have completed your course.');
+
+    callback();
+}
+
+function takeExam(callback) {
+    let result = 'fail';
+    if(result != 'fail') {
+        console.log('Well done! you have passed your exam.');
+
+        callback();
+    } else {
+        console.log('Sorry! you are failed. Please take exam again.');
+    }
+}
+
+function takeCertificate() {
+    console.log('Your certificate is ready. Please contact us.');
+}
+
+
+
+
+
+// let myPromise = new Promise(function(resolve) {
+
+//     resolve('Promise rakha somvob hosse na');
+// });
+
+// console.log(myPromise);
+
+// registration()
+//     .then(courseChoose)
+//     .then(makePayment)
+
+
+
+let myArr = null;
+
+function first() {
+
+    return new Promise(function(resolve) {
+        setTimeout(() => {
+            myArr = [1,2,3,4,5];
+    
+            resolve();
+        }, 2000);
+    })
+
+}
+
+function second() {
+    let newArr = myArr.map(function(n) {
+        return n + 5;
+    });
+
+    myArr = newArr;
+
+    console.log(myArr);
+}
+
+
+
+first()
+    .then(second)
+
 

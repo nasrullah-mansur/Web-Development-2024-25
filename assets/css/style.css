@@ -8,9 +8,12 @@ body {
   font-variation-settings:
     "wdth" 100;
 
-    background-color: #cecece;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+}
+
+
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: red;
 }

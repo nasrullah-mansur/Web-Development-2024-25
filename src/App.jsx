@@ -1,20 +1,17 @@
 
 
-let Li = () => {
-  return <li>This is li</li>
-}
 
+// import styles from './App.module.css';
 
+import Header from "./sections/Header"
 
 
 function App() {
-  return <ul>
-    <Li></Li>
-    <Li></Li>
-    <Li></Li>
-    <Li></Li>
-    <Li></Li>
-  </ul>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
-export default App;
+export default App

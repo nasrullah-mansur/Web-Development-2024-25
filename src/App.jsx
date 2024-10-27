@@ -1,17 +1,38 @@
+import { useState } from "react"
+import Moving from "./sections/Moving"
+import Navs from "./sections/Navs"
 
 
-
-// import styles from './App.module.css';
-
-import Header from "./sections/Header"
 
 
 function App() {
+
+
   return (
     <>
-      <Header />
+
+      <Navs />
+
     </>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App

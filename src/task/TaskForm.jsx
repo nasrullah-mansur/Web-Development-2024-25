@@ -4,7 +4,7 @@ import { TaskContext } from "../context";
 
 export default function TaskForm() {
 
-    const { tasks, setTasks, taskToEdit, setTaskToEdit } = useContext(TaskContext);
+    const { dispatch, taskToEdit, setTaskToEdit } = useContext(TaskContext);
 
     const [text, setText] = useState('');
 
@@ -16,27 +16,24 @@ export default function TaskForm() {
 
     const handleClick = () => {
         if (taskToEdit) {
-            // Updating;
-            setTasks(tasks.map(task => {
-                if (task.id === taskToEdit.id) {
-                    return {
-                        ...taskToEdit,
-                        text: text
-                    };
-                } else {
-                    return task;
-                }
-            }));
+            dispatch({
+                type: 'UPDATE_TASK',
+                payload: {
+                    ...taskToEdit,
+                    text: text
+                },
+            })
+
             setTaskToEdit(null)
 
         } else {
-            setTasks([
-                ...tasks,
-                {
+            dispatch({
+                type: 'ADD_TASK',
+                payload: {
                     id: crypto.randomUUID(),
                     text: text,
                 }
-            ])
+            })
         }
 
         setText('');

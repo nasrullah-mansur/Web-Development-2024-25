@@ -124,5 +124,4 @@ function initialBookData () {
     ]
 }
 
-export {initialBookData}
-
+export {initialBookData};

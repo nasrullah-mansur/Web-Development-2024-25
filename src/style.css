@@ -1,0 +1,6 @@
+.my-bg {
+    /* background-image: url('./assets/book_images/1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

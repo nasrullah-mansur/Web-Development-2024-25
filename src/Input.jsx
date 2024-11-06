@@ -1,25 +1,17 @@
-/* eslint-disable react/display-name */
-import React, { forwardRef } from 'react'
+import { forwardRef } from "react"
 
 
-const Input = forwardRef((props, ref) => {
-
-    const handleClick = () => {
-        ref.current.style.backgroundColor = 'red';
-    }
-
+function Input({ onAdd }, ref) {
     return (
-
         <div>
-            <input ref={ref} type="text" className="border" />
+            <input ref={ref} className="border p-2" type="text" />
             <br />
             <br />
-            <br />
+            <button onClick={() => onAdd()} className="border p-2">Add Item</button>
 
-            <button onClick={handleClick} className="border">Click to focus</button>
         </div>
-
     )
-})
+}
 
-export default Input;
+
+export default forwardRef(Input);

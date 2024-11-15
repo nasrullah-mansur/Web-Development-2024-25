@@ -1,65 +1,56 @@
 import { useEffect, useState } from "react";
-import { useRef } from "react"
-import Input from "./Input";
+import ProductList from "./components/ProductList";
+import Sidebar from "./components/Sidebar";
+import { api } from "./api/api";
 
 function App() {
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
 
-  const inputRef = useRef(null);
+    // Getting data for Products;
+    useEffect(() => {
+        try {
+            async function getData() {
+                // const conn = await fetch("http://localhost:3000/products");
+                // const data = await conn.json();
+                // setProducts(data);
 
-  const [liCount, setLiCount] = useState([]);
+                const conn = await api.get("/products");
+                setProducts(conn.data);
+            }
 
-  const [list, setLisit] = useState([
-    'hello',
-    'one'
-  ]);
+            getData();
+        } catch (error) {
+            console.log(error);
+        }
+    }, []);
 
+    // Getting data for Categories;
+    useEffect(() => {
+        try {
+            async function getData() {
+                // const conn = await fetch("http://localhost:3000/categories");
+                // const data = await conn.json();
+                // setCategories(data);
 
+                const conn = await api.get("/categories");
+                console.log(conn);
 
+                setCategories(conn.data);
+            }
 
+            getData();
+        } catch (error) {
+            console.log(error);
+        }
+    }, []);
 
-
-  useEffect(() => {
-    inputRef.current.style.borderColor = 'red';
-
-    setLiCount(document.querySelectorAll('li'));
-
-
-  }, []);
-
-
-  const handleAdd = () => {
-    setLisit([
-      ...list,
-      inputRef.current.value,
-    ])
-
-    inputRef.current.value = '';
-  }
-
-  return (
-    <div>
-      <Input ref={inputRef} onAdd={handleAdd} />
-      <br />
-      <br />
-      <ul>
-        {list.map((i, index) => <li key={index}>{i}</li>)}
-      </ul>
-
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-  )
-
+    return (
+        <div className="bg-slate-100 p-6 max-w-screen-2xl mx-auto grid grid-cols-12 gap-4">
+            <Sidebar categories={categories} />
+            <ProductList products={products} />
+        </div>
+    );
 }
 
-
-
-
-
-export default App
+export default App;

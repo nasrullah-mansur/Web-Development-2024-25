@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProductList from "./components/ProductList";
 import Sidebar from "./components/Sidebar";
 import { api } from "./api/api";
+import CreateProduct from "./components/CreateProduct";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -11,10 +12,6 @@ function App() {
     useEffect(() => {
         try {
             async function getData() {
-                // const conn = await fetch("http://localhost:3000/products");
-                // const data = await conn.json();
-                // setProducts(data);
-
                 const conn = await api.get("/products");
                 setProducts(conn.data);
             }
@@ -29,12 +26,7 @@ function App() {
     useEffect(() => {
         try {
             async function getData() {
-                // const conn = await fetch("http://localhost:3000/categories");
-                // const data = await conn.json();
-                // setCategories(data);
-
                 const conn = await api.get("/categories");
-                console.log(conn);
 
                 setCategories(conn.data);
             }
@@ -48,7 +40,7 @@ function App() {
     return (
         <div className="bg-slate-100 p-6 max-w-screen-2xl mx-auto grid grid-cols-12 gap-4">
             <Sidebar categories={categories} />
-            <ProductList products={products} />
+            <CreateProduct />
         </div>
     );
 }

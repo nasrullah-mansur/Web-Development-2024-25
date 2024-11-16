@@ -7,11 +7,17 @@ const api = axios.create({
 api.interceptors.request.use(
     function (config) {
         // Do something before request is sent
-        console.log(config);
-        config.data = {
-            ...config.data,
-            _token: "62753de8-5772-45f0-a239-1c1e78a96fde",
-        };
+
+        const date = new Date();
+
+        if (config.method === "post") {
+            config.data = {
+                ...config.data,
+                id: crypto.randomUUID(),
+                status: "inactive",
+                createdAt: date,
+            };
+        }
 
         return config;
     },
@@ -23,7 +29,19 @@ api.interceptors.request.use(
 
 api.interceptors.response.use(
     function (response) {
-        console.log("this is response ...");
+        console.log(response);
+
+        // let newTitle = response.data.title.toUpperCase();
+        // console.log(newTitle);
+
+        const newArr = response.data.map((item) => {
+            return {
+                ...item,
+                title: item.title.toUpperCase(),
+            };
+        });
+
+        response.data = newArr;
 
         return response;
     },

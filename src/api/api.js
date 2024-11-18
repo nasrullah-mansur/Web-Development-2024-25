@@ -29,8 +29,6 @@ api.interceptors.request.use(
 
 api.interceptors.response.use(
     function (response) {
-        console.log(response);
-
         // let newTitle = response.data.title.toUpperCase();
         // console.log(newTitle);
 

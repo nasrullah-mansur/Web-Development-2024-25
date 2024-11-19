@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Sidebar({ categories }) {
     return (
@@ -7,12 +7,20 @@ export default function Sidebar({ categories }) {
             <ul className="sticky top-3">
                 {categories.map((category) => (
                     <li key={category.id}>
-                        <a
-                            className="block p-2 bg-green-200 hover:bg-green-600 hover:text-white rounded mb-2 capitalize"
-                            href="#"
+                        <NavLink
+                            className={({ isActive, isPending }) => {
+                                return isActive
+                                    ? "block p-2 bg-green-600 text-white rounded mb-2 capitalize"
+                                    : isPending
+                                    ? "block p-2 bg-red-200 hover:bg-red-600 hover:text-white rounded mb-2 capitalize"
+                                    : "block p-2 bg-green-200 hover:bg-green-600 hover:text-white rounded mb-2 capitalize";
+
+                                // block p-2 bg-green-200 hover:bg-green-600 hover:text-white rounded mb-2 capitalize
+                            }}
+                            to={`/category/${category.title}`}
                         >
                             {category.title}
-                        </a>
+                        </NavLink>
                     </li>
                 ))}
             </ul>

@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ProductItem from "./ProductItem";
 
-export default function ProductList() {
+export default function CategoryBlogs() {
     const products = useLoaderData();
 
     return (

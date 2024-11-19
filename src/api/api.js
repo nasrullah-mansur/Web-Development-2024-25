@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "http://localhost:2000",
 });
 
 api.interceptors.request.use(
@@ -35,7 +35,7 @@ api.interceptors.response.use(
         const newArr = response.data.map((item) => {
             return {
                 ...item,
-                title: item.title.toUpperCase(),
+                // title: item.title.toUpperCase(),
             };
         });
 

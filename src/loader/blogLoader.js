@@ -5,11 +5,19 @@ async function categoryLoader() {
     return conn.data;
 }
 
-async function allCategoryLoader(test) {
-    console.log(test);
-
+async function allProductsLoader() {
     const conn = await api.get("/products");
     return conn.data;
 }
 
-export { categoryLoader, allCategoryLoader };
+async function allBlogsByCategoryLoader({ params }) {
+    console.log(params.categoryName);
+
+    const conn = await api.get("/products");
+    const updatedData = await conn.data.filter((item) => {
+        return item.category === params.categoryName;
+    });
+    return updatedData;
+}
+
+export { categoryLoader, allProductsLoader, allBlogsByCategoryLoader };

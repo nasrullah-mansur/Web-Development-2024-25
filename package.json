@@ -1,5 +1,5 @@
 {
-    "name": "00-running-class",
+    "name": "react-query",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -8,28 +8,29 @@
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "server": "json-server -p 2000 src/database/db.json"
+        "server": "json-server -p 3000 src/database/db.json"
     },
     "dependencies": {
+        "@tanstack/react-query": "^5.61.0",
+        "@tanstack/react-query-devtools": "^5.61.0",
         "axios": "^1.7.7",
         "json-server": "^1.0.0-beta.3",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-router-dom": "^6.28.0"
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@eslint/js": "^9.11.1",
-        "@types/react": "^18.3.10",
-        "@types/react-dom": "^18.3.0",
+        "@eslint/js": "^9.13.0",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
         "@vitejs/plugin-react-swc": "^3.5.0",
         "autoprefixer": "^10.4.20",
-        "eslint": "^9.11.1",
-        "eslint-plugin-react": "^7.37.0",
-        "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-        "eslint-plugin-react-refresh": "^0.4.12",
-        "globals": "^15.9.0",
-        "postcss": "^8.4.47",
-        "tailwindcss": "^3.4.13",
-        "vite": "^5.4.8"
+        "eslint": "^9.13.0",
+        "eslint-plugin-react": "^7.37.2",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "eslint-plugin-react-refresh": "^0.4.14",
+        "globals": "^15.11.0",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.15",
+        "vite": "^5.4.10"
     }
 }

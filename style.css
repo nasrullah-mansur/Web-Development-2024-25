@@ -1,0 +1,38 @@
+@keyframes mymove {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 200px;
+    }
+}
+
+@keyframes mymove {
+    0% {
+        top: 10px;
+    }
+
+    20% {
+        top: 25px;
+    }
+
+    40% {
+        top: 60px;
+    }
+
+    60% {
+        top: 70px;
+    }
+
+    80% {
+        top: 80px;
+    }
+
+    100% {
+        top: 160px;
+    }
+}
+
+h1 {
+    animation: mymove 3s infinite;
+}

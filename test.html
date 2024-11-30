@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Document</title>
+        <style>
+            h1 {
+                width: 500px;
+            }
+            .box {
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                opacity: 0.4;
+                position: fixed;
+                top: 0;
+                right: 0;
+                transition: all linear 0.5s;
+            }
+
+            .box.hide {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .circle {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box hide"></div>
+
+        <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea mollitia
+            dignissimos quas culpa quisquam reprehenderit ratione ipsam amet
+            doloribus ullam dolore quod sed dolorum, facilis quia, minima vitae.
+            Ipsa nesciunt enim quasi! Iure quisquam voluptatibus magni
+            temporibus nobis sunt porro, amet, officia doloribus quae labore
+            harum. Ad quam quasi, perferendis quas doloribus ipsam fugit iure
+            velit distinctio? Nostrum aspernatur deserunt repellat et alias
+            similique laborum recusandae aliquam optio, quod architecto, earum
+            modi iusto ratione, cupiditate nisi perspiciatis tempore vel
+            eligendi voluptatem? Delectus soluta non consequuntur sit cumque
+            quibusdam perferendis. Atque officia temporibus error soluta, eum
+            ipsam non assumenda natus repellendus.
+        </h1>
+
+        <div class="circle"></div>
+
+        <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea mollitia
+            dignissimos quas culpa quisquam reprehenderit ratione ipsam amet
+            doloribus ullam dolore quod sed dolorum, facilis quia, minima vitae.
+            Ipsa nesciunt enim quasi! Iure quisquam voluptatibus magni
+            temporibus nobis sunt porro, amet, officia doloribus quae labore
+            harum. Ad quam quasi, perferendis quas doloribus ipsam fugit iure
+            velit distinctio? Nostrum aspernatur deserunt repellat et alias
+            similique laborum recusandae aliquam optio, quod architecto, earum
+            modi iusto ratione, cupiditate nisi perspiciatis tempore vel
+            eligendi voluptatem? Delectus soluta non consequuntur sit cumque
+            quibusdam perferendis. Atque officia temporibus error soluta, eum
+            ipsam non assumenda natus repellendus.
+        </h1>
+    </body>
+
+    <script>
+        // window.addEventListener("scroll", function () {
+        //     let scrollTop = window.scrollY;
+        //     if (scrollTop >= 200) {
+        //         document.querySelector(".box").classList.remove("hide");
+        //     } else {
+        //         document.querySelector(".box").classList.add("hide");
+        //     }
+
+        //     console.log(scrollTop);
+        // });
+
+        let circle = document.querySelector(".circle");
+
+        let isObserve = (items) => {
+            let section = items[0];
+            if (section.isIntersecting) {
+                console.log("section in view");
+                observer.disconnect();
+            } else {
+                console.log("section is not in view");
+            }
+        };
+
+        let observer = new IntersectionObserver(isObserve);
+
+        observer.observe(circle);
+
+        // observer.disconnect();
+    </script>
+</html>

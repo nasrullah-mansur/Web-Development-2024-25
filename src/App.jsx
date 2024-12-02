@@ -1,46 +1,86 @@
-import { useEffect, useState } from "react";
-import ProductList from "./components/ProductList";
-import Sidebar from "./components/Sidebar";
-import { api } from "./api/api";
-import CreateProduct from "./components/CreateProduct";
+import Counter from "./components/Counter";
+import TotalCount from "./components/TotalCount";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "./features/counters/counterSlice";
 
 function App() {
-    const [products, setProducts] = useState([]);
-    const [categories, setCategories] = useState([]);
+    // const initialCounters = [
+    //     {
+    //         id: 1,
+    //         value: 0,
+    //     },
+    //     {
+    //         id: 2,
+    //         value: 0,
+    //     },
+    //     {
+    //         id: 3,
+    //         value: 0,
+    //     },
+    // ];
 
-    // Getting data for Products;
-    useEffect(() => {
-        try {
-            async function getData() {
-                const conn = await api.get("/products");
-                setProducts(conn.data);
-            }
+    // const [counters, setCounters] = useState(initialCounters);
 
-            getData();
-        } catch (error) {
-            console.log(error);
-        }
-    }, []);
+    // const totalCounterValue = counters.reduce((sum, item) => {
+    //     return sum + item.value;
+    // }, 0);
 
-    // Getting data for Categories;
-    useEffect(() => {
-        try {
-            async function getData() {
-                const conn = await api.get("/categories");
+    // const handleIncrement = (id) => {
+    //     const updateCounters = counters.map((count) => {
+    //         if (count.id == id) {
+    //             return {
+    //                 ...count,
+    //                 value: count.value + 1,
+    //             };
+    //         } else {
+    //             return count;
+    //         }
+    //     });
 
-                setCategories(conn.data);
-            }
+    //     setCounters(updateCounters);
+    // };
+    // const handleDecrement = (id) => {
+    //     const updateCounters = counters.map((count) => {
+    //         if (count.id == id) {
+    //             return {
+    //                 ...count,
+    //                 value: count.value - 1,
+    //             };
+    //         } else {
+    //             return count;
+    //         }
+    //     });
 
-            getData();
-        } catch (error) {
-            console.log(error);
-        }
-    }, []);
+    //     setCounters(updateCounters);
+    // };
+
+    // Redux here ================================ ;
+    const counters = useSelector((store) => store.counters);
+    const dispatch = useDispatch();
+
+    const totalCounterValue = counters.reduce((sum, item) => {
+        return sum + item.value;
+    }, 0);
+
+    const handleIncrement = (id) => {
+        dispatch(increment(id));
+    };
+    const handleDecrement = (id) => {
+        dispatch(decrement(id));
+    };
 
     return (
-        <div className="bg-slate-100 p-6 max-w-screen-2xl mx-auto grid grid-cols-12 gap-4">
-            <Sidebar categories={categories} />
-            <CreateProduct />
+        <div>
+            {counters.map((counter) => (
+                <Counter
+                    key={counter.id}
+                    value={counter.value}
+                    onIncrement={() => handleIncrement(counter.id)}
+                    onDecrement={() => handleDecrement(counter.id)}
+                />
+            ))}
+
+            <TotalCount totalCount={totalCounterValue} />
         </div>
     );
 }

@@ -1,0 +1,5 @@
+1. slice 
+2. store 
+3. provide store to parent component 
+
+use and enjoy

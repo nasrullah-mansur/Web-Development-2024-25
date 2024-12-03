@@ -1,5 +1,5 @@
-1. slice 
-2. store 
+1. slice - features -> counters -> counterSlice.js
+2. store - store.js
 3. provide store to parent component 
 
 use and enjoy

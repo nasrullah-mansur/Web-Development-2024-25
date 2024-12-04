@@ -6,7 +6,31 @@ export const fetchPosts = async () => {
         const data = await response.data;
         return data;
     } catch (error) {
-        console.log(error);
+        return error;
+    }
+};
+
+export const storePostApi = async (newPost) => {
+    try {
+        const response = await axios.post(
+            "http://localhost:3000/posts",
+            newPost
+        );
+        const data = await response.data;
+        return data;
+    } catch (error) {
+        return error;
+    }
+};
+
+export const deletePostApi = async (id) => {
+    try {
+        const response = await axios.delete(
+            `http://localhost:3000/posts/${id}`
+        );
+        const data = await response.data;
+        return data;
+    } catch (error) {
         return error;
     }
 };
